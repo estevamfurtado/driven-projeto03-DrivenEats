@@ -11,6 +11,9 @@ let nomeDoCliente = "";
 let valorDoCarrinho = 0.0;
 let podeFinalizar = false;
 
+let wppLink = "";
+
+
 function adicionarItemAoCarrinho (section, item) {
 
     const previousItem = carrinho[section];
@@ -107,13 +110,15 @@ function liberarBotaoDeFinalizacao() {
     }
 }
 
-function toggleCarrinhoScreen() {
+function openCarrinhoScreen() {
     atualizarTextosDoCarrinho();
+    wppLink = gerarLinkDeWpp();
     toggleClass("confirmation-screen", "hide-screen");
 }
 
 function sendOrder() {
     toggleClass("confirmation-screen", "hide-screen");
+    window.open(wppLink, "_blank");
 }
 
 function dismissOrder() {
@@ -145,4 +150,40 @@ function precoEmBRL (valor) {
         style: 'currency',
         currency: 'BRL',
     })
+}
+
+function gerarLinkDeWpp () {
+    /*
+    Olá, gostaria de fazer o pedido:
+    - Prato: Frango Yin Yang
+    - Bebida: Coquinha Gelada
+    - Sobremesa: Pudim
+    Total: R$ 27.70
+
+    Nome: Fulano
+    Endereço: Rua...
+    */
+
+    let nome = "-"
+    let endereco = "-"
+
+    nome = prompt("Qual é o seu nome?");
+    endereco = prompt("Qual é o seu endereço?");
+
+    let texto = "Olá, gostaria de fazer o pedido:\n"
+    texto += "- Prato: " + cardapio[0][carrinho[0]][0] + "\n";
+    texto += "- Bebida: " + cardapio[1][carrinho[1]][0] + "\n";
+    texto += "- Sobremesa: " + cardapio[2][carrinho[2]][0] + "\n";
+    texto += "Total: R$ " + valorDoCarrinho.toFixed(2) + "\n\n";
+    texto += "Nome: " + nome + "\n";
+    texto += "Endereço: " + endereco;
+
+    
+    let encodedText = encodeURIComponent(texto);
+    const number = "5521984554820";
+    let link = "https://wa.me/" + number + "?text=" + encodedText
+
+    console.log(link);
+
+    return link;
 }
