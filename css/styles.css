@@ -242,9 +242,6 @@ section h2 {
     align-items: center;
     justify-content: center;
 }
-.card-icon * {
-    
-}
 
 .selected .card-icon {
     background-color: #32B72F;
