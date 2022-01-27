@@ -309,7 +309,7 @@ section h2 {
 
 .confirm-order {
     padding: 20px 25px 0 25px;
-    background-color: #50D074;
+    background-color: #32B72F;
     width: calc(100% - 40px);
     max-width: 400px;
     border-radius: 9px;
@@ -344,21 +344,22 @@ section h2 {
     width: 100%;
     border-radius: 100px;
     background-color: white;
-    color: #50D074;
+    color: #32B72F;
     display: flex;
     align-items: center;
     margin-top: 24px;
     border: none;
 }
 .confirm-button p {
-    color: #50D074;
+    color: #32B72F;
 }
 
 .cancel-button {
     height: 52px;
     width: 100%;
     border-radius: 100px;
-    background-color: #50D074;
+    background-color: #32B72F;
+    /*50D074*/
     display: flex;
     align-items: center;
     border: none;
