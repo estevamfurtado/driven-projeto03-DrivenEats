@@ -39,7 +39,7 @@ button:enabled {
     width: 100vw;
     height: 100vh;
 
-    position: relative;
+    /*position: relative;*/
 
     overflow: hidden;
 }
@@ -123,7 +123,8 @@ footer {
 .main-view {
 
     height: 100vh;
-    position: relative;
+    
+    /*position: relative;*/
 }
 
 .main {
@@ -183,7 +184,7 @@ section h2 {
 .card .item-img {
     height: 87px;
     width: 144px;
-    overflow: hidden;
+    overflow:visible;
     border-radius: 4px;
 
     margin-bottom: 15px;
@@ -203,7 +204,11 @@ section h2 {
 }
 
 .item-img img {
-    height: 100%;
+    height: 90%;
+    transition: 0.1s;
+}
+.card:hover .item-img img {
+    height: 120%;
 }
 
 
@@ -267,8 +272,8 @@ section h2 {
 
 .card:hover {
     cursor: pointer;
-    bottom: 2px;
-    right: 2px;
+    /*bottom: 2px;
+    right: 2px;*/
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
