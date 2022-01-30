@@ -23,7 +23,7 @@
     <div class="screen">
 
         <div id="confirmation-screen" class="confirmation-screen hide-screen">
-            <div class="confirm-order">
+            <div data-identifier="confirmation-dialog" class="confirm-order">
 
                 <p>Confirme seu pedido</p>
 
@@ -54,8 +54,10 @@
             </div>
         </div>
 
-        <div class="main-view">
+        
 
+        <div class="main-view">
+            
             <header>
                 <h1>DrivenEats</h1>
                 <p>Sua comida em 6 minutos</p>
@@ -65,16 +67,16 @@
 
             <div class="main">
 
-                <section>
+                <section data-identifier="dishes">
                     <h2>Escolha seu hambúrguer</h2>
 
                     <div class="cards">
                         
-                        <div id="card-0-0" class="card" onclick="adicionarItemAoCarrinho(0,0)">
+                        <div data-identifier="food-option" id="card-0-0" class="card" onclick="adicionarItemAoCarrinho(0,0)">
                             <div class="item-img bg-1"><img src="media/bigmac.png"></div>
-                            <h3 class="item-title">Big Méqui</h3>
+                            <h3 data-identifier="food-title" class="item-title">Big Méqui</h3>
                             <p class="item-description">2 hambúrgueres... Você já sabe.</p>
-                            <p class="item-price">R$ 18,50</p>
+                            <p data-identifier="food-price" class="item-price">R$ 18,50</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
@@ -82,33 +84,33 @@
 
                         </div>
 
-                        <div id="card-0-1" class="card" onclick="adicionarItemAoCarrinho(0,1)">
+                        <div data-identifier="food-option" id="card-0-1" class="card" onclick="adicionarItemAoCarrinho(0,1)">
                             <div class="item-img bg-1"><img src="media/cheddar.png"></div>
-                            <h3 class="item-title">Cheddar MéqMelt</h3>
+                            <h3 data-identifier="food-title" class="item-title">Cheddar MéqMelt</h3>
                             <p class="item-description">Cheddar que não tem igual.</p>
-                            <p class="item-price">R$ 17,50</p>
+                            <p data-identifier="food-price" class="item-price">R$ 17,50</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-0-2" class="card" onclick="adicionarItemAoCarrinho(0,2)">
+                        <div data-identifier="food-option" id="card-0-2" class="card" onclick="adicionarItemAoCarrinho(0,2)">
                             <div class="item-img bg-1"><img src="media/quarterao.png"></div>
-                            <h3 class="item-title">Quarteirinho</h3>
+                            <h3 data-identifier="food-title" class="item-title">Quarteirinho</h3>
                             <p class="item-description">Clássico dos clássicos.</p>
-                            <p class="item-price">R$ 15,50</p>
+                            <p data-identifier="food-price" class="item-price">R$ 15,50</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-0-3" class="card" onclick="adicionarItemAoCarrinho(0,3)">
+                        <div data-identifier="food-option" id="card-0-3" class="card" onclick="adicionarItemAoCarrinho(0,3)">
                             <div class="item-img bg-1"><img src="media/bigtasty.png"></div>
-                            <h3 class="item-title">BigTeisti</h3>
+                            <h3 data-identifier="food-title" class="item-title">BigTeisti</h3>
                             <p class="item-description">Do tamanho da sua fome.</p>
-                            <p class="item-price">R$ 20,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 20,00</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
@@ -118,36 +120,36 @@
                     </div>
                 </section>
 
-                <section>
+                <section data-identifier="drinks">
                     <h2>Agora, sua bebida</h2>
                     <div class="cards">
-                        <div id="card-1-0" class="card" onclick="adicionarItemAoCarrinho(1,0)">
+                        <div data-identifier="food-option" id="card-1-0" class="card" onclick="adicionarItemAoCarrinho(1,0)">
                             <div class="item-img  bg-2"><img src="media/coke.png"></div>
-                            <h3 class="item-title">Coca</h3>
+                            <h3 data-identifier="food-title" class="item-title">Coca</h3>
                             <p class="item-description">O sabor do mundo.</p>
-                            <p class="item-price">R$ 5,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 5,50</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-1-1" class="card" onclick="adicionarItemAoCarrinho(1,1)">
+                        <div data-identifier="food-option" id="card-1-1" class="card" onclick="adicionarItemAoCarrinho(1,1)">
                             <div class="item-img  bg-2"><img src="media/guarana.png"></div>
-                            <h3 class="item-title">Guaraná</h3>
+                            <h3 data-identifier="food-title" class="item-title">Guaraná</h3>
                             <p class="item-description">Refrescante e brasileiro.</p>
-                            <p class="item-price">R$ 5,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 5,00</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-1-2" class="card" onclick="adicionarItemAoCarrinho(1,2)">
+                        <div data-identifier="food-option" id="card-1-2" class="card" onclick="adicionarItemAoCarrinho(1,2)">
                             <div class="item-img  bg-2"><img src="media/uva.png"></div>
-                            <h3 class="item-title">Suco de Uva</h3>
+                            <h3 data-identifier="food-title" class="item-title">Suco de Uva</h3>
                             <p class="item-description">Direto da fruta.</p>
-                            <p class="item-price">R$ 4,50</p>
+                            <p data-identifier="food-price" class="item-price">R$ 4,50</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
@@ -158,36 +160,36 @@
                     </div>
                 </section>
 
-                <section>
+                <section data-identifier="deserts">
                     <h2>Que tal um doce?</h2>
                     <div class="cards">
-                        <div id="card-2-0" class="card" onclick="adicionarItemAoCarrinho(2,0)">
+                        <div data-identifier="food-option" id="card-2-0" class="card" onclick="adicionarItemAoCarrinho(2,0)">
                             <div class="item-img  bg-3"><img src="media/casquinha.png"></div>
-                            <h3 class="item-title">Casquete</h3>
+                            <h3 data-identifier="food-title" class="item-title">Casquete</h3>
                             <p class="item-description">Que tal tirar uma casquinha?</p>
-                            <p class="item-price">R$ 3,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 3,00</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-2-1" class="card" onclick="adicionarItemAoCarrinho(2,1)">
+                        <div data-identifier="food-option" id="card-2-1" class="card" onclick="adicionarItemAoCarrinho(2,1)">
                             <div class="item-img  bg-3"><img src="media/sundae.png"></div>
-                            <h3 class="item-title">SunDay</h3>
+                            <h3 data-identifier="food-title" class="item-title">SunDay</h3>
                             <p class="item-description">Para dias quentes.</p>
-                            <p class="item-price">R$ 8,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 8,00</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
 
-                        <div id="card-2-2" class="card" onclick="adicionarItemAoCarrinho(2,2)">
+                        <div data-identifier="food-option" id="card-2-2" class="card" onclick="adicionarItemAoCarrinho(2,2)">
                             <div class="item-img  bg-3"><img src="media/mcflurry.png"></div>
-                            <h3 class="item-title">MéquiFlury</h3>
+                            <h3 data-identifier="food-title" class="item-title">MéquiFlury</h3>
                             <p class="item-description">O inigualável!</p>
-                            <p class="item-price">R$ 12,00</p>
+                            <p data-identifier="food-price" class="item-price">R$ 12,00</p>
                             <div class="card-icon">
                                 <ion-icon class="add-icon" name="add-outline"></ion-icon>
                                 <ion-icon class="ok-icon" name="checkmark-outline"></ion-icon>
@@ -203,10 +205,12 @@
 
 
 
-
+            
             <footer>
                 <button id="checkOut-button" class="" disabled="disabled" onclick="openCarrinhoScreen()">Selecione os 3 itens para fechar o pedido</button>
             </footer>
+
+             
 
         </div>
 

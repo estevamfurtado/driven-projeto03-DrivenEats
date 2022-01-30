@@ -1,4 +1,17 @@
 
+function resize()
+{
+    var heights = window.innerHeight;
+    console.log("heights")
+    document.querySelector("body").style.height = heights + "px";
+}
+resize();
+window.onresize = function() {
+    resize();
+};
+
+
+
 let cardapio = [
     [["Big Méqui", 18.50], ["Cheddar MéqMelt", 17.50], ["Quarteirinho", 15.50], ["BigTeisti", 20.0]],
     [["Coca", 5.0], ["Guaraná", 5.0], ["Suco de Uva", 4.50]],
@@ -19,10 +32,11 @@ function adicionarItemAoCarrinho (section, item) {
     const previousItem = carrinho[section];
 
     if (item === previousItem) {
-        carrinho[section] = -1;
-        numDeSelecoes += -1;
+
+        // carrinho[section] = -1;
+        // numDeSelecoes += -1;
         //console.log("* Você retirou o " + cardapio[section][previousItem][0] + " do carrinho.")
-        toggleClass("card-"+ section + "-"+ previousItem,"selected");
+        // toggleClass("card-"+ section + "-"+ previousItem,"selected");
     }
     else {
         if (previousItem > -1) {
@@ -101,7 +115,7 @@ function liberarBotaoDeFinalizacao() {
 
     if (disabled == true & numDeSelecoes == 3) {
         button.disabled = false;
-        button.innerHTML = "Feche o pedido!";
+        button.innerHTML = "Fechar pedido";
     }
     else if (disabled == false & numDeSelecoes < 3) {
         button.disabled = true;
